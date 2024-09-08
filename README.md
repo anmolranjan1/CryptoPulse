@@ -14,8 +14,8 @@
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/anmolranjan1/cryptopulse.git
-   cd cryptopulse
+   git clone https://github.com/anmolranjan1/CryptoPulse.git
+   cd CryptoPulse
    ```
 2. Install dependencies:
     ```bash
