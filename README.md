@@ -17,21 +17,28 @@
    git clone https://github.com/anmolranjan1/CryptoPulse.git
    cd CryptoPulse
    ```
-2. Install dependencies:
+2. **Create a .env File:**
+- Go to the [CoinGecko API page](https://www.coingecko.com/en/api) to obtain your API key.
+- Create a file named `.env` in the root directory of your project.
+- Add your API key to the `.env` file:
+  ```plaintext
+  COINGECKO_API_KEY=your_api_key_here
+  ```
+3. Install dependencies:
     ```bash
     npm install
     ```
-3. Start the Development Server:
+4. Start the Development Server:
     ```
-    npm start
+    npm run dev
     ```
-Open http://localhost:3000 in your browser to view the application.
+Open http://localhost:5173 in your browser to view the application.
 
 ## Usage
 - **Home Page:** View current prices and trends of various cryptocurrencies.
 - **Search Feature:** Use the search bar to find and view details of specific cryptocurrencies.
 - **Coin Details Page:** Access detailed information including historical data and price charts.
 
-## Api Integration
+## API Integration
 The app uses the CoinGecko API to fetch real-time cryptocurrency data. Ensure that you adhere to the API usage guidelines and rate limits.
 
