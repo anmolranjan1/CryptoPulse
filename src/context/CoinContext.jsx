@@ -15,7 +15,7 @@ const CoinContextProvider = (props)=>{
           method: "GET",
           headers: {
             accept: "application/json",
-            "x-cg-demo-api-key": "CG-wzBPs1zwroDkzWeU5jhYD2kj",
+            "x-cg-demo-api-key": import.meta.env.COINGECKO_API_KEY,
           },
         };
 
@@ -29,7 +29,6 @@ const CoinContextProvider = (props)=>{
     }
 
     useEffect(()=>{
-      console.log("Fetching coins for currency:", currency.name);
         fetchAllCoin();
     },[currency])
 
