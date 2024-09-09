@@ -10,25 +10,7 @@ const CoinContextProvider = (props)=>{
         symbol: "$",
     })
 
-    // const fetchAllCoin = async ()=>{
-    //     const options = {
-    //       method: "GET",
-    //       headers: {
-    //         accept: "application/json",
-    //         "x-cg-demo-api-key": "CG-wzBPs1zwroDkzWeU5jhYD2kj",
-    //       },
-    //     };
-
-    //     fetch(
-    //       `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}`,
-    //       options
-    //     )
-    //       .then((response) => response.json())
-    //       .then((response) => setAllCoin(response))
-    //       .catch((err) => console.error("Error fetching coins:", err));
-    // }
-
-    const fetchAllCoin = async () => {
+    const fetchAllCoin = async ()=>{
         const options = {
           method: "GET",
           headers: {
@@ -37,17 +19,14 @@ const CoinContextProvider = (props)=>{
           },
         };
 
-        try {
-          const response = await fetch(
-            `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}`,
-            options
-          );
-          const data = await response.json();
-          setAllCoin(data);
-        } catch (err) {
-          console.error("Error fetching coins:", err);
-        }
-    };
+        fetch(
+          `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}`,
+          options
+        )
+          .then((response) => response.json())
+          .then((response) => setAllCoin(response))
+          .catch((err) => console.error("Error fetching coins:", err));
+    }
 
     useEffect(()=>{
       console.log("Fetching coins for currency:", currency.name);
