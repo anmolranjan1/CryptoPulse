@@ -15,7 +15,7 @@ const Coin = () => {
       method: "GET",
       headers: {
         accept: "application/json",
-        "x-cg-demo-api-key": import.meta.env.COINGECKO_API_KEY,
+        "x-cg-demo-api-key": "CG-wzBPs1zwroDkzWeU5jhYD2kj",
       },
     };
 
@@ -30,7 +30,7 @@ const Coin = () => {
       method: "GET",
       headers: {
         accept: "application/json",
-        "x-cg-demo-api-key": import.meta.env.COINGECKO_API_KEY,
+        "x-cg-demo-api-key": "CG-wzBPs1zwroDkzWeU5jhYD2kj",
       },
     };
 
